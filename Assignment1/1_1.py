@@ -30,8 +30,8 @@ for i in range(10):
     c = i % 5
     pc = eigvec[:, i].reshape(28, 28)
     axes[r, c].imshow(pc, cmap='gray')
-            axes[r, c].set_title(f'PC {i+1}')
-            axes[r, c].axis('off')
+    axes[r, c].set_title(f'PC {i+1}')
+    axes[r, c].axis('off')
 plt.show()
 
 print("Explained Variance Ratio:")

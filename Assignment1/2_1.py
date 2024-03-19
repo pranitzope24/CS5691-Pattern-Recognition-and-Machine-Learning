@@ -32,14 +32,14 @@ for _ in range(random_initializations):
     plt.ylabel('Error')
     plt.legend()
     plt.show()
-
+    
     colors = plt.cm.Spectral(np.linspace(0, 1, k))
     for cluster_label, color in zip(range(k), colors):
         cluster_points = data[labels == cluster_label]
         plt.scatter(cluster_points[:, 0], cluster_points[:, 1], c=[color], marker='o', label=f'Cluster {cluster_label + 1} - Initialization')
 
     plt.scatter(og_centroids[:, 0], og_centroids[:, 1], c='black', marker='o', label='init')
-    plt.scatter(centroids[:, 0], centroids[:, 1], c='black', marker='*', s=150, label='mu')
+     
 
     plt.title('K-means Clustering with Different Initializations')
     plt.xlabel('X')
